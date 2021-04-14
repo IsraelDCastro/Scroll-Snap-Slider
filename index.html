@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css">
+    <title>Scroll Snap Slider</title>
+  </head>
+  <body>
+    <div class="container">
+      <button id="left">left</button>
+      <div>
+        <div class="scroll-snap">
+          <div class="slide slide-1">1</div>
+          <div class="slide slide-2">2</div>
+          <div class="slide slide-3">3</div>
+          <div class="slide slide-4">4</div>
+          <div class="slide slide-5">5</div>
+          <div class="slide slide-6">6</div>
+        </div>
+        <div class="dots">
+      </div>
+      </div>
+      <button id="right">right</button>
+    </div>
+
+    <script>
+      const scrollSnap = document.querySelector('.scroll-snap');
+      const left = document.querySelector('#left');
+      const button = document.querySelector('#right');
+      const scrollSlide = document.querySelectorAll('.slide');
+      
+      // Dots
+      if (scrollSnap.childElementCount >= 2) {
+        let dots = document.querySelector('.dots')
+        for (let index = 0; index < scrollSlide.length; index++) {
+          let tag = document.createElement('span');
+          tag.classList.add('dot');
+          dots.appendChild(tag);
+          tag.addEventListener('click', () => {
+            scrollSnap.scrollLeft = slide.scrollWidth * index;
+          })
+        }
+      };
+
+      for (let index = 0; index < scrollSlide.length; index++) {
+        var slide = scrollSlide[index];
+      };
+      
+      left.addEventListener('click', () => {
+        scrollSnap.scrollLeft -= slide.scrollWidth;
+        console.log(scrollSnap.scrollLeft -= slide.scrollWidth)
+      });
+
+      right.addEventListener('click', () => {
+        scrollSnap.scrollLeft += slide.scrollWidth;
+        console.log(scrollSnap.scrollLeft += slide.scrollWidth)
+      });
+    </script>
+  </body>
+</html>
