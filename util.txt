@@ -1,0 +1,368 @@
+<div id="float-btn" class="delivery-float">
+	<a class="delivery-float-btn" href="https://www.chefleandrodiaz.com/platos-del-dia-a-dia/">
+		<figure class="delivery-float-img">
+			<img src="https://www.chefleandrodiaz.com/wp-content/uploads/2020/07/plato-del-dia-cool-heaver.png" alt="Platos del Día a Día">
+		</figure>
+		<h4 class="delivery-float-title">Disfruta de los Platos del Día a Día!</h4>
+	</a>
+	<button class="close-btn" click="close()"><i class="fas fa-times"></i></button>
+</div>
+
+<script>
+	let float = document.getElementById('float-btn');
+	float.addEventListener('click', function(){
+		float.classList.add('hide');
+	})
+	
+// 	const floatButton = document.getElementById("float-btn");
+
+if ( [1,2,6,7].includes(new Date().getDay()) ) {
+  float.classList.add("hide");
+} else {
+  float.classList.remove("hide");
+}
+</script>
+
+function drinkCoffee (cup, te) {
+  if ( user === 'working' ) {
+    return checkCup()
+  }
+  function checkCup () {
+    if ( cup || te == null) {
+      refill ();
+    } else if ( cup || te == true ) {
+      drink()
+    } else {
+      checkCup ()
+    }
+  }
+}
+drinkCoffee()
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth <= 767) {
+    sidebar.classList.add('is-active');
+  } else {
+    sidebar.classList.remove('is-active');
+  }
+}, true);
+
+window.onscroll = function changeClass(){
+  var scrollPosY = window.pageYOffset | document.body.scrollTop;
+  var navBar = document.getElementById('main-menu')
+  if(scrollPosY >= 130) {
+    navBar.classList.add('sticky-menu','fadeInDown', 'animated')
+    navBar.classList.remove('fadeIn')
+  } else {
+    navBar.classList.remove('sticky-menu', 'fadeInDown')
+    navBar.classList.add('fadeIn',)
+  }
+}
+
+
+<div id="float-btn" class="delivery-float hide">
+	<a class="delivery-float-btn" href="https://www.chefleandrodiaz.com/cena-a-la-carta/">
+		<figure class="delivery-float-img">
+			<img src="https://www.chefleandrodiaz.com/wp-content/uploads/2020/06/PUCRD-copia.jpg" alt="All Delivery RD">
+		</figure>
+		<h4 class="delivery-float-title">Cena a la Carta!</h4>
+	</a>
+	<button class="close-btn" click="close()"><i class="fas fa-times"></i></button>
+</div>
+
+<script>
+	let float = document.getElementById('float-btn');
+	float.addEventListener('click', function(){
+		float.classList.add('hide');
+	})
+</script>
+
+<div class="pagination flex">
+  <a class="pagination-prev pagination-link" href="#">
+    <i class="fas fa-chevron-left"></i>
+  </a>
+  <ul class="pagination-list flex">
+    <li><a class="pagination-link is-active" href="#">1</a></li>
+    <li><a class="pagination-link" href="#">2</a></li>
+    <li><a class="pagination-link" href="#">3</a></li>
+    <li><a class="pagination-link" href="#">4</a></li>
+    <li><a class="pagination-link" href="#">5</a></li>
+  </ul>
+  <a class="pagination-next pagination-link" href="#">
+    <i class="fas fa-chevron-right"></i>
+  </a>
+</div>
+
+function openTab(evt, tabName) {
+  let i, x, tablinks;
+  x = document.getElementsByClassName("tab-inner-content");
+  for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tab-a");
+  for (i = 0; i < x.length; i++) {
+      tablinks[i].classList.remove("is-active");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " is-active";
+}
+
+<div class="box-content-tabs">
+  <ul class="tabs-lists flex mb-6">
+    <li class="tab-link">
+      <a click="openTab(event,'activity')" class="tab-a is-active">Activites</a>
+    </li>
+    <li class="tab-link">
+      <a click="openTab(event,'notes')" class="tab-a">Notes</a>
+    </li>
+    <li class="tab-link">
+      <a click="openTab(event,'emails')" class="tab-a">Emails</a>
+    </li>
+    <li class="tab-link">
+      <a click="openTab(event,'call')" class="tab-a">Calls</a>
+    </li>
+    <li class="tab-link">
+      <a click="openTab(event,'meeting')" class="tab-a">Meetings</a>
+    </li>
+  </ul>
+  <div class="tabs-content">
+    <div id="activity" class="tab-inner-content" >
+      <form class="filter-user">
+        <div class="field flex">
+          <label class="label mr-2 font-light">Filter by:</label>
+          <div class="select">
+            <select class="select-inner">
+              <option>All</option>
+              <option>Emails</option>
+              <option>Notes</option>
+              <option>Calls</option>
+              <option>Meetings</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <div class="select">
+            <select class="select-inner">
+              <option>All users</option>
+              <option>User 2</option>
+              <option>User 3</option>
+              <option>User 4</option>
+              <option>User 5</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <div class="select">
+            <select class="select-inner">
+              <option>All teams</option>
+              <option>Team 2</option>
+              <option>Team 3</option>
+              <option>Team 4</option>
+              <option>Team 5</option>
+            </select>
+          </div>
+        </div>
+        <div class="field search-input">
+          <div class="control flex">
+            <input class="input" type="text" placeholder="Search...">
+            <button class="search-btn">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+      <hr class="my-3">
+      <div class="activities">
+        <div class="activity">
+          <h6 class="title-month">August 2020</h6>
+          <div class="activity-info">
+            <div class="activity-info-header">
+              <div class="head-left">
+                <i class="fas fa-envelope"></i> Email
+              </div>
+              <div class="head-right">
+                <a class="inline-block pin" href="#">
+                  Pin <i class="fas fa-thumbtack transform rotate-45"></i>
+                </a>
+                <a class="inline-block ml-2 delete" href="#">
+                  Delete <i class="fas fa-trash-alt"></i>
+                </a>
+                <span class="inline-block ml-2 date">
+                  Aug 3, 2020 at 9:00 AM AST
+                </span>
+              </div>
+            </div>
+            <div class="activity-info-content p-4">
+              <h5 class="mb-1">Israel De Castro</h5>
+              <p class="mb-4 text-gray-700">Subject: Marketing</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates inventore enim odit sed. Doloribus atque quibusdam sunt repellat libero in neque, corrupti incidunt sit laboriosam quisquam suscipit totam architecto fugiat!</p>
+            </div>
+            <div class="activity-info-footer text-right">
+              <button class="button outline primary">Reply</button class="button outline primary">
+              <button class="button filled">See More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="notes" class="tab-inner-content" style="display:none">
+      <p>Take notes about this record to keep track of important info. You can even @mention a teammate if you need to. Learn more.</p>
+    </div>
+    <div id="emails" class="tab-inner-content" style="display:none">
+      <p>Mail a contact from this record. Or log a call activity to keep track of your discussion and notes.</p>
+    </div>
+    <div id="call" class="tab-inner-content" style="display:none">
+      <p>Call a contact from this record. Or log a call activity to keep track of your discussion and notes.</p>
+    </div>
+    <div id="meeting" class="tab-inner-content" style="display:none">
+      <p>Schedule a meeting with a contact from this record. Or log a meeting activity to keep track of your meeting and notes.</p>
+    </div>
+  </div>
+</div>
+
+
+let allBoard = document.getElementsByClassName("board");
+for (let index = 0; index < allBoard.length; index++) {
+  let board = allBoard[index];
+
+  let boardResizeObserve = new ResizeObserver(entries => {
+    entries.forEach(() => {
+      let addClass = (board.clientHeight > 620) ? "board overflow-y-auto" : "board";
+      board.setAttribute("class", addClass);
+      console.log("fahffa",board)
+      if (board.clientHeight > 620) {
+        board.classList.add("overflow-y-auto");
+      } else {
+        board.classList.remove("overflow-y-auto");
+      }
+    });
+  });
+  boardResizeObserve.observe(board);
+}
+
+let allBoard = document.getElementsByClassName("board");
+for (let index = 0; index < allBoard.length; index++) {
+  let board = allBoard[index];
+  let boardResizeObserve = new ResizeObserver(entries => {
+    entries.forEach(entry => {
+      const addClass = (board.clientHeight > 620) ? board.classList.add("overflow-y-auto") : board.classList.remove("overflow-y-auto");
+      if (board.clientHeight > 620) {
+        board.classList.add("overflow-y-auto");
+      } else {
+        board.classList.remove("overflow-y-auto");
+      }
+      console.log('width ', + index + " " + entry.contentRect.width);
+      console.log('height ', + index + " " + entry.contentRect.height);
+    });
+  });
+  boardResizeObserve.observe(board);
+}
+new Sortable(noStarted, {
+  group: 'shared',
+  animation: 500,
+  filter: '.filtered',
+  ghostClass: 'clone-task'
+});
+new Sortable(inProgress, {
+  group: 'shared',
+  animation: 500,
+  filter: '.filtered',
+  ghostClass: 'clone-task'
+});
+new Sortable(waiting, {
+  group: 'shared',
+  animation: 500,
+  filter: '.filtered',
+  ghostClass: 'clone-task'
+});
+new Sortable(completed, {
+  group: 'shared',
+  animation: 500,
+  filter: '.filtered',
+  ghostClass: 'clone-task'
+});
+new Sortable(deferred, {
+  group: 'shared',
+  animation: 500,
+  filter: '.filtered',
+  ghostClass: 'clone-task'
+});
+
+
+-------------------------------
+
+
+<div class="line-between"></div>
+<div class="column is-12-mobile is-6-tablet is-5-desktop">
+  <h3 class="has-text-centered">Registrarse</h3>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "register-form" }) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+    <div class="field">
+      <%= f.label :full_name, "Usuario", class:"label" %>
+      <%= f.text_field :full_name, autocomplete: "full_name", placeholder: "Escriba su Nombre y Apellidos completo", class:"input" %>
+    </div>
+    <div class="field">
+      <%= f.label :email, class:"label" %>
+      <%= f.email_field :email, autocomplete: "email", placeholder: "ejemplo@ejemplo.com", class:"input" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password, "Contraseña", class:"label" %>
+      <%= f.password_field :password, autocomplete: "new-password", placeholder: "Contraseña", class:"input" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password_confirmation, "Confirmar Contraseña", class:"label" %>
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Confirmar Contraseña", class:"input" %>
+    </div>
+    <div class="buttons">
+      <div class="control">
+        <label class="checkbox">
+          <input type="checkbox" required>
+          Acepto los <%= link_to 'Términos y Condiciones', terminos_y_condiciones_path, class: "footer-link" %>
+        </label>
+      </div>
+    </div>
+    <div class="recaptcha btn-register">
+        <%= invisible_recaptcha_tags text: "Registrarse", class:"button is-second" %>
+    </div>
+  <% end %>
+</div>
+
+
+<div id="bounce-circles">
+	<div class="circle what-circle animated">
+		<div class="circle how-circle animated">
+			<div class="circle why-circle animated">
+				<p class="text animated">¿Por qué?</p>
+			</div>
+			<p class="text animated">¿Cómo?</p>
+		</div>
+		<p class="text animated">¿Qué?</p>
+	</div>
+</div>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+<script>
+var controller = new ScrollMagic.Controller();
+		// build scene
+		new ScrollMagic.Scene({
+							triggerElement: "#bounce-circles",
+							triggerHook: 0.9, // show, when scrolled 10% into view
+							duration: "100%", // hide 10% before exiting view (80% + 10% from bottom)
+							offset: 10 // move trigger to center of element
+						})
+						.setClassToggle(".circle ", "zoomIn") // add class to reveal
+						// .addIndicators() // add indicators (requires plugin)
+						.addTo(controller);
+		new ScrollMagic.Scene({
+							triggerElement: "#bounce-circles",
+							triggerHook: 0.9, // show, when scrolled 10% into view
+							duration: "100%", // hide 10% before exiting view (80% + 10% from bottom)
+							offset: 50 // move trigger to center of element
+						})
+						.setClassToggle(".text ", "fadeIn") // add class to reveal
+						// .addIndicators() // add indicators (requires plugin)
+						.addTo(controller);
+</script>

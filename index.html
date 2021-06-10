@@ -18,8 +18,7 @@
           <div class="slide slide-5">5</div>
           <div class="slide slide-6">6</div>
         </div>
-        <div class="dots">
-      </div>
+        <div class="dots"></div>
       </div>
       <button id="right">right</button>
     </div>
@@ -27,7 +26,7 @@
     <script>
       const scrollSnap = document.querySelector('.scroll-snap');
       const left = document.querySelector('#left');
-      const button = document.querySelector('#right');
+      const right = document.querySelector('#right');
       const scrollSlide = document.querySelectorAll('.slide');
       
       // Dots
@@ -37,11 +36,29 @@
           let tag = document.createElement('span');
           tag.classList.add('dot');
           dots.appendChild(tag);
+          dots.firstChild.classList.add('active');
           tag.addEventListener('click', () => {
             scrollSnap.scrollLeft = slide.scrollWidth * index;
           })
+          tag.addEventListener('click', () => {
+            let i, x;
+            x = document.getElementsByClassName("dot");
+            for (i = 0; i < x.length; i++) {
+              x[i].classList.remove("active");
+            }
+            tag.classList.add("active")
+          })
         }
       };
+      // setInterval( () => {
+      //   if (scrollSnap.childElementCount >= 6) {
+      //     console.log("Hola")
+      //     scrollSnap.scrollLeft += slide.scrollWidth;
+      //   } else if (scrollSnap.childElementCount = 6 ) {
+      //     scrollSnap.scrollLeft = 0;
+      //     console.log("adios")
+      //   }
+      // }, 1000);
 
       for (let index = 0; index < scrollSlide.length; index++) {
         var slide = scrollSlide[index];
